@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cifrador de Mensajes Seguro</title>
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- CDN: crypto-js para AES, DES y 3DES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+
+  <!-- CDN: blowfish.js para Blowfish -->
+  <script src="https://cdn.jsdelivr.net/npm/blowfish.js@1.0.0/blowfish.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- ── Encabezado ──────────────────────────────────────────────────── -->
+    <header>
+      <h1>
+        Cifrador de Mensajes Seguro
+        <span>Caesar / XOR / AES / DES / 3DES / Blowfish</span>
+      </h1>
+    </header>
+
+    <!-- ── Panel de entrada ────────────────────────────────────────────── -->
+    <div class="panel">
+      <p class="panel-title">Entrada</p>
+
+      <div class="form-group">
+        <label for="input-message">Mensaje</label>
+        <textarea id="input-message" placeholder="Escribe el mensaje aqui..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="input-key">Clave</label>
+        <input type="text" id="input-key" placeholder="Clave definida por el usuario" />
+      </div>
+
+      <div class="form-group">
+        <label for="select-algorithm">Algoritmo</label>
+        <select id="select-algorithm">
+          <option value="cesar">Cesar</option>
+          <option value="xor">XOR</option>
+          <option value="aes">AES</option>
+          <option value="des">DES</option>
+          <option value="des3">Triple DES (3DES)</option>
+          <option value="blowfish">Blowfish</option>
+        </select>
+      </div>
+
+      <!-- Botones de accion -->
+      <div class="btn-group">
+        <button id="btn-encrypt" class="btn-primary">Cifrar</button>
+        <button id="btn-decrypt" class="btn-secondary">Descifrar</button>
+      </div>
+
+      <!-- Mensaje de error (oculto por defecto) -->
+      <div id="output-error"></div>
+    </div>
+
+    <!-- ── Panel de resultados ─────────────────────────────────────────── -->
+    <div class="panel">
+      <p class="panel-title">Resultados</p>
+
+      <div class="result-group">
+        <p class="result-label">Mensaje original</p>
+        <div id="output-original" class="result-value"></div>
+      </div>
+
+      <div class="result-group">
+        <p class="result-label">Mensaje cifrado</p>
+        <div id="output-encrypted" class="result-value"></div>
+      </div>
+
+      <div class="result-group">
+        <p class="result-label">Mensaje descifrado</p>
+        <div id="output-decrypted" class="result-value"></div>
+      </div>
+
+      <!-- Indicador de coincidencia -->
+      <div id="output-match"></div>
+    </div>
+
+    <!-- ── Footer ──────────────────────────────────────────────────────── -->
+    <footer>
+      Cifrador de Mensajes Seguro &mdash; Criptografia aplicada
+    </footer>
+
+  </div>
+
+  <!-- Scripts: algoritmos primero, luego ui.js, main.js al final -->
+  <script src="js/algorithms/cesar.js"></script>
+  <script src="js/algorithms/xor.js"></script>
+  <script src="js/algorithms/aes.js"></script>
+  <script src="js/algorithms/des.js"></script>
+  <script src="js/algorithms/des3.js"></script>
+  <script src="js/algorithms/blowfish.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
