@@ -14,7 +14,7 @@ const UI = (() => {
     aes:      AES,
     des:      DES,
     des3:     DES3,
-    blowfish: Blowfish
+    blowfish: BlowfishAlgo
   };
 
   // Referencias a elementos del DOM.
