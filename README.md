@@ -19,20 +19,26 @@ Aplicacion web para cifrar y descifrar mensajes usando seis algoritmos criptogra
 
 ## Estructura del proyecto
 
+```txt
 cifrador/
-index.html -- estructura principal y carga de recursos
-css/
-style.css -- estilos, tema terminal de seguridad
-js/
-algorithms/
-cesar.js -- cifrado Cesar
-xor.js -- cifrado XOR
-aes.js -- cifrado AES via crypto-js
-des.js -- cifrado DES via crypto-js
-des3.js -- cifrado Triple DES via crypto-js
-blowfish.js -- cifrado Blowfish (implementacion nativa)
-ui.js -- logica de interfaz y manejo de eventos
-main.js -- punto de entrada, inicializacion
+│
+├── index.html          # estructura principal y carga de recursos
+│
+├── css/
+│   └── style.css       # estilos, tema terminal de seguridad
+│
+└── js/
+    ├── algorithms/
+    │   ├── cesar.js    # cifrado César
+    │   ├── xor.js      # cifrado XOR
+    │   ├── aes.js      # cifrado AES vía crypto-js
+    │   ├── des.js      # cifrado DES vía crypto-js
+    │   ├── des3.js     # cifrado Triple DES vía crypto-js
+    │   └── blowfish.js # cifrado Blowfish (implementación nativa)
+    │
+    ├── ui.js           # lógica de interfaz y manejo de eventos
+    └── main.js         # punto de entrada e inicialización
+```
 
 ---
 
